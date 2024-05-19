@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/public/fonts/SFPRODISPLAYREGULAR.OTF") format("truetype");
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src: url("/public/fonts/SFPRODISPLAYBOLD.OTF") format("truetype");
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 500;
+    src: url("/public/fonts/SFPRODISPLAYMEDIUM.OTF") format("truetype");
+}
+
+html {
+    min-height: 100vh;
+    background: #F2F3F7;
+    color: #272727;
+    font-family: SF Pro Display, sans-serif;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    height: 14px;
+    width: 14px;
+    border-radius: 100%;
+    cursor: grab;
+    -webkit-appearance: none;
+    transition: .3s;
+}
+
+.range-bg::-webkit-slider-thumb {
+    background: white;
+    border: 2px solid #D68D00;
+}
+
+button {
+    outline: none;
+}
+
+input {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.yay-tooltip .MuiTooltip-tooltip {
+    padding: 0 !important;
+    background: none !important;
+    max-width: 340px !important;
+    font-family: SF Pro Display, sans-serif !important;
+}
+
+@keyframes inner {
+    0% {
+      stroke-dashoffset: 187;
+    }
+  
+    25% {
+      stroke-dashoffset: 80;
+    }
+  
+    100% {
+      stroke-dashoffset: 187;
+      transform: rotate(360deg);
+    }
+  }
+  
+.spinnerInner1 {
+    transform: rotate(-90deg);
+    stroke-linecap: round;
+    stroke-width: 20;
+    fill: none;
+    overflow: hidden;
+    width: 16px;
+    height: 16px;
+  }
+  
+.spinnerInner1>circle:first-of-type {
+    stroke-dashoffset: 0;
+    transform-origin: center center;
+    stroke-dasharray: 312;
+    animation: 1s linear 0s infinite normal none running inner;
+    stroke: white;
+}
